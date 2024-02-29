@@ -49,7 +49,7 @@ void loop()
 
   digitalWrite(LED1, HIGH);
   startmS =  millis();                                         //start transmit timer
-  if (LT.transmitFSK(buff, TXPacketL, 10000, TXpower, WAIT_TX))   //will return packet length sent if OK, otherwise 0 if transmit error
+  if (LT.transmitFSK(buff, TXPacketL, 1000, TXpower, WAIT_TX))   //will return packet length sent if OK, otherwise 0 if transmit error
   {
     endmS = millis();                                          //packet sent, note end time
     TXPacketCount++;
